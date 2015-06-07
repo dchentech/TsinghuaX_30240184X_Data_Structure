@@ -41,7 +41,9 @@ task :run_a_C_project, [:project_name] => [:install_clib_via_homebrew] do |t, ar
   main_executer = File.join(project_dir, "main.o")
 
   sh "clang #{all_c_files.join(' ')} -o #{main_executer}"
-  run_result = `cat #{File.join(project_dir, "input.txt")} | #{main_executer}`
+  cmd = "cat #{File.join(project_dir, "input.txt")} | #{main_executer}"
+  logger.info cmd
+  run_result = `#{cmd}`
 
   logger.info "=== Run result"
   logger.info "\n#{run_result}"

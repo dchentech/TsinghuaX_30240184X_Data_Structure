@@ -66,6 +66,8 @@ Hash
  * See original code at http://stackoverflow.com/questions/4384359/quick-way-to-implement-dictionary-in-c
  * Below is modified, such as the value is int type now.
  *
+ * Use open addressing hash method.
+ *
  * */
 struct Food { /* table entry: */
     struct Food *next; /* next entry in chain */
