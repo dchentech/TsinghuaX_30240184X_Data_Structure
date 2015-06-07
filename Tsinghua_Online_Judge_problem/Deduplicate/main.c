@@ -58,7 +58,7 @@ Hash
 #include <string.h>
 
 #define MaxFoodLen 40
-#define HASHSIZE 600000
+#define HASHSIZE 600005
 
 
 
@@ -120,10 +120,7 @@ struct Food *install(char *name, int count)
 
 
 
-int main() {
-    // hash_t *epicure_collection = hash_new();
-    // dict *epicure_collection = dict_new();
-
+int main(int argc, const char * argv[]) {
     int read_line_num = 0;
     int foods_count = 0;
 
@@ -137,7 +134,7 @@ int main() {
         // via http://stackoverflow.com/questions/1726298/strip-first-and-last-character-from-c-string
         food[strlen(food)-1] = 0;  // remove \n at the last of the str, and food is already a pointer.
 
-        if (strlen(food) > 40) {
+        if (strlen(food) > MaxFoodLen) {
             printf("The food \"%s\"'s length at line %d is greater than %d", food, read_line_num, max_food_len);
             exit(1);
         }
