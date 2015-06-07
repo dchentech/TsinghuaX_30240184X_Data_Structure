@@ -1,0 +1,7 @@
+{
+  "clib_packages": [
+    "clibs/hash",
+    "AjayMT/dict.c",
+    "troydhanson/uthash"
+  ]
+}

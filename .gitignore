@@ -26,3 +26,8 @@
 *.exe
 *.out
 *.app
+
+# clib packages
+Tsinghua_Online_Judge_problem/Deduplicate/hash
+Tsinghua_Online_Judge_problem/Deduplicate/dict.c
+Tsinghua_Online_Judge_problem/Deduplicate/uthash
